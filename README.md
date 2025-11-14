@@ -1,4 +1,3 @@
-```markdown
 # AutorennenFX
 
 Ein kleines JavaFX-Spiel, in dem zwei Autos und ein Fahrrad auf einer Fahrbahn fahren können.  
