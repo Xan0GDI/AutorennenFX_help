@@ -119,4 +119,3 @@ Mögliche Ideen zur Erweiterung des Projekts:
 
 Dieses Projekt ist als Lern-/Beispielprojekt gedacht.  
 Verwende oder passe es frei für Unterricht, Übungen oder eigene Experimente an.
-```
