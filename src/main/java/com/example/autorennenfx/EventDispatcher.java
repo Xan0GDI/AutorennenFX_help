@@ -10,11 +10,9 @@ import java.util.Set;
 
 public class EventDispatcher {
 
-    private Object source;
-    private Map<EventType<? extends Event>, Set<EventHandler<Event>>> eventHandlersMap;
+    private final Map<EventType<? extends Event>, Set<EventHandler<Event>>> eventHandlersMap;
 
     public EventDispatcher(Object source) {
-        this.source = source;
         this.eventHandlersMap = new HashMap<>();
     }
 
