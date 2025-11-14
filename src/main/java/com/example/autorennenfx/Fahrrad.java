@@ -27,7 +27,11 @@ public class Fahrrad extends Fahrzeug {
 
     @Override
     public void anzeigen(GraphicsContext gc) {
-        // Fahrrad-Bild zeichnen
-        gc.drawImage(FAHRRAD_IMAGE, getX(), getY());
+        // Bild auf 30px Höhe skalieren, Breite im Seitenverhältnis
+        double targetHeight = 30;
+        double scale = targetHeight / FAHRRAD_IMAGE.getHeight();
+        double targetWidth = FAHRRAD_IMAGE.getWidth() * scale;
+
+        gc.drawImage(FAHRRAD_IMAGE, getX(), getY(), targetWidth, targetHeight);
     }
 }

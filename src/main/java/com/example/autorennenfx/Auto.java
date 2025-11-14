@@ -33,7 +33,11 @@ public class Auto extends Fahrzeug {
 
     @Override
     public void anzeigen(GraphicsContext gc) {
-        // Auto-Bild zeichnen
-        gc.drawImage(AUTO_IMAGE, getX(), getY());
+        // Bild auf 30px Höhe skalieren, Breite im Seitenverhältnis
+        double targetHeight = 30;
+        double scale = targetHeight / AUTO_IMAGE.getHeight();
+        double targetWidth = AUTO_IMAGE.getWidth() * scale;
+
+        gc.drawImage(AUTO_IMAGE, getX(), getY(), targetWidth, targetHeight);
     }
 }

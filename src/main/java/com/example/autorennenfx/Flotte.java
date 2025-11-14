@@ -16,18 +16,22 @@ public class Flotte {
 
     public void hupe(int index) { fahrzeuge.get(index).erschrecken(); }
 
-    public void shockCheck() {
-        for (int i = 0; i < fahrzeuge.size(); i++) {
-            for (int j = 0; j < fahrzeuge.size(); j++) {
-                if (i == j) continue;
+    public void shockCheck(Fahrzeug ausloeser) {
+        Fahrzeug ziel = null;
+        double minDist = Double.MAX_VALUE;
 
-                Fahrzeug a = fahrzeuge.get(i);
-                Fahrzeug b = fahrzeuge.get(j);
+        for (Fahrzeug f : fahrzeuge) {
+            if (f == ausloeser) continue; // der Huper/Klingler selbst bleibt unberührt
 
-                if (Math.abs(a.getX() - b.getX()) < 40) {
-                    a.erschrecken();
-                }
+            double dist = Math.abs(f.getX() - ausloeser.getX());
+            if (dist < 40 && dist < minDist) {
+                minDist = dist;
+                ziel = f;
             }
+        }
+
+        if (ziel != null) {
+            ziel.erschrecken();
         }
     }
 }

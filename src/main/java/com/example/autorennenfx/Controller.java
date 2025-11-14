@@ -16,13 +16,13 @@ public class Controller {
     private final Flotte flotte = new Flotte();
 
     private Auto auto1;
-    private Auto auto2;
+    private Auto2 auto2;
     private Fahrrad bike;
 
     @FXML
     public void initialize() {
         auto1 = new Auto(50, Color.RED);
-        auto2 = new Auto(130, Color.BLUE);
+        auto2 = new Auto2(130, Color.BLUE);
         bike = new Fahrrad(220, Color.GREEN);
 
         flotte.add(auto1);
@@ -47,7 +47,7 @@ public class Controller {
     @FXML
     void actHupe1() {
         auto1.hupen();
-        flotte.shockCheck();
+        flotte.shockCheck(auto1);
     }
 
     @FXML
@@ -59,7 +59,7 @@ public class Controller {
     @FXML
     void actHupe2() {
         auto2.hupen();
-        flotte.shockCheck();
+        flotte.shockCheck(auto2);
     }
 
     @FXML
@@ -71,7 +71,7 @@ public class Controller {
     @FXML
     void actKlingeln() {
         bike.klingeln();
-        flotte.shockCheck();
+        flotte.shockCheck(bike);
     }
 
 
