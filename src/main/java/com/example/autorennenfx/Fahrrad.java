@@ -7,6 +7,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 
 import java.util.Objects;
+import java.text.DecimalFormat;
 
 public class Fahrrad extends Fahrzeug {
 
@@ -33,5 +34,10 @@ public class Fahrrad extends Fahrzeug {
         double targetWidth = FAHRRAD_IMAGE.getWidth() * scale;
 
         gc.drawImage(FAHRRAD_IMAGE, getX(), getY(), targetWidth, targetHeight);
+    }
+
+    public String getGeschwindigkeit() {
+        DecimalFormat df = new DecimalFormat("000");
+        return df.format(geschwindigkeit * 10);
     }
 }

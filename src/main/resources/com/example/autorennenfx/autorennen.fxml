@@ -61,7 +61,7 @@
                         <Button fx:id="btnTreten" layoutX="69.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0"
                                 text="Treten" textFill="GREEN"
                                 onAction="#actTreten" />
-                        <Label layoutX="29.0" layoutY="20.0" text="???" textFill="GREEN">
+                        <Label fx:id="lblTacho3" layoutX="29.0" layoutY="20.0" text="000" textFill="GREEN">
                             <font>
                                 <Font name="Courier New" size="24.0" />
                             </font>

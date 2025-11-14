@@ -12,6 +12,7 @@ public class Controller {
     @FXML private Canvas cvsFahrbahn;
     @FXML private Label lblTacho1;
     @FXML private Label lblTacho2;
+    @FXML private Label lblTacho3;
 
     private final Flotte flotte = new Flotte();
 
@@ -89,6 +90,7 @@ public class Controller {
 
         lblTacho1.setText(auto1.getGeschwindigkeit());
         lblTacho2.setText(auto2.getGeschwindigkeit());
+        lblTacho3.setText(bike.getGeschwindigkeit());
     }
 
 }
